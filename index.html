@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Quiz App</title>
+ <link rel="stylesheet" href="styles.css">
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js for displaying results -->
+</head>
+
+<body>
+ <div class="quiz-container">
+  <!-- User Info Form -->
+  <div id="user-info-container">
+   <h2>Enter Your Information</h2>
+   <label for="name">Name:</label>
+   <input type="text" id="name" placeholder="Your name" required><br>
+   <label for="email">Email:</label>
+   <input type="email" id="email" placeholder="Your email" required><br>
+   <label for="phone">Phone:</label>
+   <input type="tel" id="phone" placeholder="Your phone" required><br>
+   <button onclick="startQuiz()">Start Quiz</button>
+   <button id="view-result-btn" onclick="viewExistingResult()">View Previous Result</button>
+   <!-- <button id="clear-result-btn" onclick="clearResult()">Clear Previous Result</button> -->
+
+  </div>
+
+  <!-- Category Selection and Questions -->
+  <div id="quiz-container" style="display:none;">
+   <div id="category-container">
+    <h2>Select Category:</h2>
+    <select id="category-select" onchange="loadQuestions()">
+     <option value="">Choose...</option>
+    </select>
+   </div>
+   <div id="quiz-box">
+    <h2 id="question"></h2>
+    <ul id="answer-options"></ul>
+    <div class="controls">
+     <button id="prev-btn" onclick="previousQuestion()">Previous</button>
+     <button id="next-btn" onclick="nextQuestion()">Next</button>
+     <button id="submit-btn" onclick="submitQuiz()">Submit Quiz</button> <!-- New Submit Button -->
+
+    </div>
+   </div>
+  </div>
+
+  <!-- Result Section -->
+  <div id="result-container" style="display:none;">
+   <h2 id="result-heading"></h2>
+   <canvas id="result-chart"></canvas>
+   <!-- <button onclick="exportToExcel()">Download Result as CSV</button> -->
+   <button id="download-jpg-btn" onclick="downloadJPG()">Download Result</button>
+
+   <button id="email-result-btn" onclick="captureScreenshotAndOpenGmail()">Mail Me Result</button>
+
+  </div>
+ </div>
+
+ <script src="script.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+</body>
+
+</html>
