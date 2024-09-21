@@ -509,7 +509,7 @@ function captureScreenshotAndOpenGmail() {
     const email = "shahebali247bd@gmail.com";
     const subject = encodeURIComponent("My Quiz Results");
     const body = encodeURIComponent(
-      `Hi LearnWithShaheb,\n\nHere are My quiz results:\n` +
+      `Hi LearnWithShaheb,\n\nHere is My quiz results:\n` +
         `- Score: ${score}/${totalQuestions} (${(
           (score / totalQuestions) *
           100
