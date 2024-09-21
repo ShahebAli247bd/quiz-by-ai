@@ -501,15 +501,15 @@ function captureScreenshotAndOpenGmail() {
     newWindow.document.write(
       '<img src="' +
         screenshotDataURL +
-        '" alt="Quiz Result Screenshot" style="width:380px" width="380" />'
+        '" alt="Quiz Result Screenshot" style="width:410px" width="410" />'
     );
     newWindow.document.title = "Quiz Result Screenshot - Right-click to Save";
 
     // Now prepare the pre-filled email link userData.email
     const email = "shahebali247bd@gmail.com";
-    const subject = encodeURIComponent("Your Quiz Results");
+    const subject = encodeURIComponent("My Quiz Results");
     const body = encodeURIComponent(
-      `Hi ${userData.name},\n\nHere are your quiz results:\n` +
+      `Hi LearnWithShaheb,\n\nHere are My quiz results:\n` +
         `- Score: ${score}/${totalQuestions} (${(
           (score / totalQuestions) *
           100
