@@ -461,11 +461,14 @@ function checkIPParticipation() {
 }
 
 function startQuiz() {
-  // Ensure the user has not already participated
-  if (!checkIPParticipation()) {
-    return; // Stop the quiz if the user has already participated
+ 
+  let getUserData = JSON.parse(localStorage.getItem("userData")) || {}
+  if(getUserData.name || getUserData.email || getUserData==phone){
+      // Ensure the user has not already participated
+      if (!checkIPParticipation()) {
+        return; // Stop the quiz if the user has already participated
+      }
   }
-
   // Collect user info
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
@@ -474,12 +477,14 @@ function startQuiz() {
   if (!name || !email || !phone) {
     alert("Please fill all fields.");
     return;
-  }
+  } 
 
   // Store user data
   userData = { name, email, phone };
   localStorage.setItem("userData", JSON.stringify(userData));
 
+
+  
   // Hide user info form and show quiz
   document.getElementById("user-info-container").style.display = "none";
   document.getElementById("quiz-container").style.display = "block";
