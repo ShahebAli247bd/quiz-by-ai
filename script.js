@@ -1,37 +1,118 @@
 const quizData = {
   categories: [
     {
-      name: "Math",
+      name: "Computer Fundamentals",
       questions: [
         {
-          question: "What is 2+2?",
-          options: ["3", "4", "5", "6"],
-          correct: 1,
+          question: "What does CPU stand for?",
+          options: ["Central Processing Unit", "Central Programming Unit", "Computer Personal Unit", "Central Personal Unit"],
+          correct: 0
         },
         {
-          question: "What is 10/2?",
-          options: ["3", "5", "7", "6"],
-          correct: 1,
+          question: "Which of the following is a peripheral device?",
+          options: ["CPU", "Keyboard", "RAM", "Hard Disk"],
+          correct: 1
         },
-      ],
+        {
+          question: "What type of memory is volatile?",
+          options: ["ROM", "SSD", "RAM", "HDD"],
+          correct: 2
+        },
+        {
+          question: "What does RAM stand for?",
+          options: ["Random Access Memory", "Read Access Memory", "Ready Access Memory", "Random Active Memory"],
+          correct: 0
+        },
+        {
+          question: "Which of these is an input device?",
+          options: ["Monitor", "Printer", "Mouse", "Speaker"],
+          correct: 2
+        },
+        {
+          question: "Which unit is responsible for all logical operations in a computer?",
+          options: ["ALU", "CU", "CPU", "RAM"],
+          correct: 0
+        },
+        {
+          question: "What is the primary function of an operating system?",
+          options: ["Manage hardware", "Run applications", "Control memory", "All of the above"],
+          correct: 3
+        },
+        {
+          question: "What is the full form of HDD?",
+          options: ["Hardware Device Disk", "Hard Drive Disk", "Hard Disk Drive", "High Definition Disk"],
+          correct: 2
+        },
+        {
+          question: "Which of these is not an example of an operating system?",
+          options: ["Windows", "Linux", "Android", "MS Word"],
+          correct: 3
+        },
+        {
+          question: "What does BIOS stand for?",
+          options: ["Basic Input Output System", "Binary Input Output System", "Built-in Operating System", "Basic Information Operating System"],
+          correct: 0
+        }
+      ]
     },
     {
-      name: "Science",
+      name: "HTML & CSS Fundamentals",
       questions: [
         {
-          question: "What is the chemical symbol for water?",
-          options: ["HO", "H2O", "O2", "OH"],
-          correct: 1,
+          question: "What does HTML stand for?",
+          options: ["HyperText Markup Language", "Hyper Transfer Markup Language", "HyperTool Markup Language", "HyperText Management Language"],
+          correct: 0
         },
         {
-          question: "Which planet is known as the Red Planet?",
-          options: ["Earth", "Mars", "Jupiter", "Saturn"],
-          correct: 1,
+          question: "Which HTML tag is used to define an unordered list?",
+          options: ["<ol>", "<ul>", "<li>", "<list>"],
+          correct: 1
         },
-      ],
-    },
-  ],
+        {
+          question: "What does CSS stand for?",
+          options: ["Cascading Style Sheets", "Computer Style Sheets", "Creative Style Sheets", "Cascading Script Sheets"],
+          correct: 0
+        },
+        {
+          question: "Which HTML element is used for the largest heading?",
+          options: ["<h1>", "<h6>", "<header>", "<h5>"],
+          correct: 0
+        },
+        {
+          question: "What is the correct HTML element for inserting a line break?",
+          options: ["<lb>", "<br>", "<break>", "<newline>"],
+          correct: 1
+        },
+        {
+          question: "How can you make text bold in HTML?",
+          options: ["<strong>", "<b>", "<bold>", "Both <strong> and <b>"],
+          correct: 3
+        },
+        {
+          question: "Which CSS property is used to change the background color?",
+          options: ["color", "bgcolor", "background-color", "background"],
+          correct: 2
+        },
+        {
+          question: "Which HTML tag is used to define a hyperlink?",
+          options: ["<a>", "<link>", "<href>", "<hyperlink>"],
+          correct: 0
+        },
+        {
+          question: "Which CSS property controls the text size?",
+          options: ["font-size", "text-style", "font-weight", "text-size"],
+          correct: 0
+        },
+        {
+          question: "How can you create a comment in HTML?",
+          options: ["<!-- Comment -->", "// Comment", "/* Comment */", "' Comment"],
+          correct: 0
+        }
+      ]
+    }
+  ]
 };
+
 
 let currentQuestionIndex = 0;
 let currentCategory = null;
