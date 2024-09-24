@@ -192,24 +192,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// function startQuiz() {
-//   // Collect user info
-//   const name = document.getElementById("name").value;
-//   const email = document.getElementById("email").value;
-//   const phone = document.getElementById("phone").value;
-
-//   if (!name || !email || !phone) {
-//     alert("Please fill all fields.");
-//     return;
-//   }
-
-//   // Store user data
-//   userData = { name, email, phone };
-
-//   // Hide user info form and show quiz
-//   document.getElementById("user-info-container").style.display = "none";
-//   document.getElementById("quiz-container").style.display = "block";
-// }
 
 function loadQuestions() {
   const categorySelect = document.getElementById("category-select");
@@ -582,6 +564,7 @@ function captureScreenshotAndOpenGmail() {
                   (score / totalQuestions) *
                   100
               ).toFixed(2)}%)\n` +
+              `\n\nMy Name is ${userData.name} and My Email is ${userData.email} & mobile ${userData.phone}`+
               `\n\nPlease find the result screenshot attached.`
       );
 
