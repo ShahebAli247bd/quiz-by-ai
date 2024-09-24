@@ -385,9 +385,9 @@ function viewExistingResult() {
       // Display the stored user information and quiz result
       const resultHeading = document.getElementById("result-heading");
       resultHeading.innerHTML = `
-       <p>Name: ${resultData.name}</p>
-       <p>Email: ${resultData.email}</p>
-       <p>Phone: ${resultData.phone}</p>
+       <p>Name: ${resultData.userInfo.name}</p>
+       <p>Email: ${resultData.userInfo.email}</p>
+       <p>Phone: ${resultData.userInfo.phone}</p>
        <h3>You scored ${resultData.score}/${resultData.totalQuestions} (${resultData.percentage}%)</h3>
    `;
 
