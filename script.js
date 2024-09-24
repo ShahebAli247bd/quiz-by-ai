@@ -564,10 +564,10 @@ function captureScreenshotAndOpenGmail() {
                   (score / totalQuestions) *
                   100
               ).toFixed(2)}%)\n` +
-              `\n\n My Registration Information:
-              \n\nName: ${userData.name} 
-              \n\nEmail: ${userData.email} 
-              \n\nPhone: ${userData.phone}`+
+              `\n\nMy Registration Information:
+                    Name: ${userData.name} 
+                    Email: ${userData.email} 
+                    Phone: ${userData.phone}`+
               `\n\nPlease find the result screenshot attached.`
       );
 
