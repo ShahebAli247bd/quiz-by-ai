@@ -565,11 +565,11 @@ function captureScreenshotAndOpenGmail() {
                   (resultData.score / resultData.totalQuestions) *
                   100
               ).toFixed(2)}%)\n` +
-              `\n\nMy Registration Information:
+              `\nMy Registration Information:
                 Name: ${resultData.userInfo.name} 
                 Email: ${resultData.userInfo.email} 
                 Phone: ${resultData.userInfo.phone}`+
-              `\n\nPlease find the result screenshot attached.`
+              `\nNote:Please find your result in new tab opened, drag and drop it to attached with mail.`
       );
 
       // Open Gmail with pre-filled TO, Subject, and Body fields
