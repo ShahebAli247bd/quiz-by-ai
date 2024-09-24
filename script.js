@@ -539,12 +539,12 @@ let getResult = JSON.parse(localStorage.getItem("quizResult"));
 */
 function captureScreenshotAndOpenGmail() {
   const resultSection = document.getElementById("result-container");
-  const quizResult = localStorage.getItem('quizResult');
 
   // Capture the screenshot of the result section
   html2canvas(resultSection).then(function (canvas) {
       // Convert the canvas to a data URL (base64 image)
       const screenshotDataURL = canvas.toDataURL("image/png");
+      const resultData = JSON.parse(localStorage.getItem("quizResult"));
 
       // Display the image in a new window (so the user can download it manually)
       const newWindow = window.open();
@@ -566,9 +566,9 @@ function captureScreenshotAndOpenGmail() {
                   100
               ).toFixed(2)}%)\n` +
               `\n\nMy Registration Information:
-                Name: ${quizResult.userInfo.name} 
-                Email: ${quizResult.userInfo.email} 
-                Phone: ${quizResult.userInfo.phone}`+
+                Name: ${resultData.userInfo.name} 
+                Email: ${resultData.userInfo.email} 
+                Phone: ${resultData.userInfo.phone}`+
               `\n\nPlease find the result screenshot attached.`
       );
 
