@@ -558,11 +558,11 @@ function captureScreenshotAndOpenGmail() {
 
       // Now prepare the pre-filled email link userData.email
       const email = "shahebali247bd@gmail.com";
-      const subject = encodeURIComponent("My Quiz Results");
+      const subject = encodeURIComponent(`Quiz Results of ${resultData.userInfo.name}`);
       const body = encodeURIComponent(
           `Hi LearnWithShaheb,\n\nHere is My quiz results:\n` +
-              `- Score: ${score}/${totalQuestions} (${(
-                  (score / totalQuestions) *
+              `- Score: ${resultData.score}/${resultData.totalQuestions} (${(
+                  (resultData.score / resultData.totalQuestions) *
                   100
               ).toFixed(2)}%)\n` +
               `\n\nMy Registration Information:
